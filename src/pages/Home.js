@@ -1,9 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
+import turtle from "../images/Schildi.jpeg";
+
 
 export default function Home(){
-    return <h1 class="headline">Home</h1>
-    //carousel
-    //text
-    //footer
+     //carousel
+    return (
+    <><h1 class="headline">Home</h1>
+    <p>Welcome to Save the Turtles!</p>
+    <img alt="turtle" src={turtle}></img></>
+    )
 }
