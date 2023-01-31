@@ -10,12 +10,14 @@ import {Route, Routes} from "react-router-dom";
 
  import Provider from './I18n/provider';
  import { LOCALES } from './I18n/locales';
+import { ShoppingCartProvider } from './context/ShoppingCartContext';
 // import translate from './I18n/translate';
 
 function App() {
    const [locale, setLocale] = useState(LOCALES.ENGLISH);
     return (
         <> 
+        <ShoppingCartProvider>
         <Provider locale={locale}>
         <Navbar/>
         <div className="content container">
@@ -31,6 +33,7 @@ function App() {
         
         </Provider>
         <CustomFooter/>
+        </ShoppingCartProvider>
         </>
         
     );
