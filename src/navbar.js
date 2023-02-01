@@ -13,7 +13,7 @@ export default function Navbar () {
     const [locale, setLocale] = useState(LOCALES.ENGLISH);
     return (
         <Provider locale={locale}>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-left">
+        <nav className="navbar navbar-expand-lg navbar-light main-header">
             <ul className="navbar-nav mr-auto">
             <Link to="/" className="site-title">Save the Turtles</Link> 
             <CustomLink to="/about" className="link">About</CustomLink>
