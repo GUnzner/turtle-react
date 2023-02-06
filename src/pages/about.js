@@ -1,11 +1,12 @@
 import React from 'react';
-import turtle from "../images/Schildi.JPG"
+import turtle from "../images/Schildi.JPG";
+import { useTranslation } from 'react-i18next';
 
 export default function About(){
+    const { t } = useTranslation();
     return (
-    <><h1>About</h1>
-    <p>This is a website about turtles and why they are awesome.
-        Help save the turtles by buying cute items from our store or get in touch to find out more!</p>
-    <img alt='Schildi' style={{height: '400px'}} src={turtle}></img></>
+    <><h1 className="headline">{t('about')}</h1>
+    <p>{t('about-text')}</p>
+    <img alt='Schildi' className="mb-5" style={{height: '400px'}} src={turtle}></img></>
     )
 }

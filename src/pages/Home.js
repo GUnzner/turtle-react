@@ -10,7 +10,8 @@ import kassio from "../images/Schildi.jpeg";
 import sonnen from "../images/sonnen.jpg";
 import tortoise from "../images/tortoise.jpg";
 import wasser from "../images/wasser.jpg";
-import ImageSlider from "../components/imageslide"
+import ImageSlider from "../components/imageslide";
+import { useTranslation } from "react-i18next";
 
 
 export default function Home(){
@@ -25,12 +26,14 @@ export default function Home(){
         margin: "0 auto"
      }
 
+     const { t } = useTranslation();
+
     return (
-    <><h1 className="headline">Home</h1>
-    <p>Welcome to Save the Turtles!</p>
+    <><h1 className="headline">{t('Home')}</h1>
+    <p>{t('Welcome')}</p>
     {/* <img alt="turtle" src={turtle}></img> */}
-    <div style={containerStyles}>
-    <ImageSlider slides={slides}/>
+    <div className="mb-5" style={containerStyles}>
+    <ImageSlider slides={slides} />
     </div></>
     )
 }

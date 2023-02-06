@@ -1,29 +1,28 @@
 import {Link, useMatch, useResolvedPath} from "react-router-dom"
-import React, {useState} from "react"
-
-import Provider from './I18n/provider';
-import { LOCALES } from './I18n/locales';
-import translate from './I18n/translate';
+import React from "react";
+import i18next from "i18next";
 import { useShoppingCart } from "./context/ShoppingCartContext";
 import { Button } from "react-bootstrap";
 
 
 export default function Navbar () {
     const { openCart, cartQuantity} = useShoppingCart()
-    const [locale, setLocale] = useState(LOCALES.ENGLISH);
+
     return (
-        <Provider locale={locale}>
         <nav className="navbar navbar-expand-lg navbar-light main-header">
-            <ul className="navbar-nav mr-auto">
+            <ul className="navbar-nav mx-auto">
             <Link to="/" className="site-title">Save the Turtles</Link> 
             <CustomLink to="/about" className="link">About</CustomLink>
             <CustomLink to="/donate" className="link">Donate</CustomLink>
             <CustomLink to="/contact" className="link">Contact</CustomLink>
-            <button  onClick={() => setLocale(LOCALES.ENGLISH)}>English</button>
-            <button  onClick={() => setLocale(LOCALES.GERMAN)}>Deutsch</button>
+            </ul>
+
+            <ul className="nav navbar-nav navbar-right">
+            <button onClick={() => i18next.changeLanguage('en')}>English</button>
+            <button onClick={() => i18next.changeLanguage('de')}>Deutsch</button>
 
             {cartQuantity > 0 && (
-                <Button
+                <Button 
                     onClick={openCart}
                     style={{ width: "3rem", height: "3rem", position: "relative" }}
                     variant="outline-primary"
@@ -56,7 +55,6 @@ export default function Navbar () {
             </ul>
         </nav>
         
-        </Provider>
     
     )
 }

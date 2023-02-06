@@ -6,14 +6,17 @@ import React from 'react';
 import storeItems from "../data/items.json";
 import {Col, Row} from "react-bootstrap";
 import { StoreItem } from '../components/StoreItems';
+import { useTranslation } from 'react-i18next';
+
 
 
 export default function Donate(){
+    const { t } = useTranslation();
     return(
         <><section className="content-section container">
-            <h2 className="section-header">Donate</h2>
+            <h2 className="headline">{t('Donate')}</h2>
 
-            <p>Donate for a good cause: buy cute products to save the turtles now!</p>
+            <p>{t('Donate-text')}</p>
             <div className="flex-container">
             <Row md={2} xs={1} lg={4} className="g-3">
                 {storeItems.map(item => (

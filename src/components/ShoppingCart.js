@@ -4,9 +4,9 @@ import { formatCurrency } from "../utilities/currencyFormat";
 import { CartItem } from "./CartItem";
 import storeItems from "../data/items.json";
 
-
 export function ShoppingCart({isOpen}){
-    const { closeCart, cartItems } = useShoppingCart()
+    const { closeCart, cartItems, clearAll } = useShoppingCart()
+
     return (
         <Offcanvas show={isOpen} onHide={closeCart} placement="end">
             <Offcanvas.Header closeButton>
@@ -24,7 +24,11 @@ export function ShoppingCart({isOpen}){
                     )}
                     </div>
                 </Stack>
+                
+                <button className="btn btn-primary position-relative bottom-0" 
+                    onClick={() => clearAll()}>Checkout</button>
             </Offcanvas.Body>
+           
         </Offcanvas>
     )
 }

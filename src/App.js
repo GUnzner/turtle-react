@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import Navbar from "./navbar";
 import About from "./pages/about";
 import Contact from "./pages/contact";
@@ -6,19 +6,42 @@ import Donate from "./pages/donate";
 import Home from "./pages/Home";
 import CustomFooter from './components/footer';
 import {Route, Routes} from "react-router-dom";
-
-
- import Provider from './I18n/provider';
- import { LOCALES } from './I18n/locales';
 import { ShoppingCartProvider } from './context/ShoppingCartContext';
-// import translate from './I18n/translate';
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import LanguageDetector from 'i18next-browser-languagedetector';
+import HttpApi from 'i18next-http-backend';
+
+i18n
+  .use(initReactI18next) 
+  .use(LanguageDetector)
+  .use(HttpApi)
+  .init({
+    supportedLngs: ['en', 'de'],
+    fallbackLng: "en",
+    detection: {
+      order: ['path', 'cookie', 'htmlTag', 'localStorage', 'subdomain'],
+      caches: ['cookie']
+    },
+    backend: {
+      loadPath: '/assets/locales/{{lng}}/translation.json',
+    },
+    react: { useSuspense: false}
+  });
+
+
 
 function App() {
-   const [locale, setLocale] = useState(LOCALES.ENGLISH);
+    const { t } = useTranslation();
+
+    useEffect(() => {
+        document.title = t('title')
+    }, [t])
+    
+    
     return (
         <> 
         <ShoppingCartProvider>
-        <Provider locale={locale}>
         <Navbar/>
         <div className="content container">
             <Routes>
@@ -30,8 +53,7 @@ function App() {
        
         
         </div>
-        
-        </Provider>
+
         <CustomFooter/>
         </ShoppingCartProvider>
         </>

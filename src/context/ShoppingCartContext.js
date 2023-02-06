@@ -60,10 +60,14 @@ export function ShoppingCartProvider( {children}) {
         return currItems.filter(item => item.id !== id)
     })
    }
+   function clearAll(){
+    alert("Thank you for your support");
+    setCartItems(currItems => []);
+   }
 
     return (
     <ShoppingCartContext.Provider value={{ getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, 
-            openCart, closeCart, cartItems, cartQuantity }}>
+            clearAll, openCart, closeCart, cartItems, cartQuantity }}>
         {children}
         <ShoppingCart isOpen={isOpen}/>
     </ShoppingCartContext.Provider>
