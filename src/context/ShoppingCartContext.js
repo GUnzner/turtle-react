@@ -11,8 +11,13 @@ export function useShoppingCart(){
 }
 
 export function ShoppingCartProvider( {children}) {
-    const [cartItems, setCartItems] = useState([])
-    const [isOpen, setIsOpen] = useLocalStorage("shopping-cart", [])
+
+    const [isOpen, setIsOpen] = useState(false)
+    let [cartItems, setCartItems] = useLocalStorage("shopping-cart", [])
+
+    if (!Array.isArray(cartItems)){
+        cartItems=setCartItems(Array.from(cartItems))
+    }
 
     const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0)
 
