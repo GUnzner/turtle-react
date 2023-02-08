@@ -1,9 +1,11 @@
 import { createContext, useContext, useState } from "react"
 import { ShoppingCart } from "../components/ShoppingCart"
 import { useLocalStorage } from "../hooks/useLocalStorage"
+import { useTranslation } from 'react-i18next';
 
 
 const ShoppingCartContext = createContext({})
+
 
 export function useShoppingCart(){
     return useContext(ShoppingCartContext)
@@ -14,6 +16,7 @@ export function ShoppingCartProvider( {children}) {
 
     const [isOpen, setIsOpen] = useState(false)
     let [cartItems, setCartItems] = useLocalStorage("shopping-cart", [])
+    const { t } = useTranslation();
 
     if (!Array.isArray(cartItems)){
         cartItems=setCartItems(Array.from(cartItems))
@@ -66,7 +69,7 @@ export function ShoppingCartProvider( {children}) {
     })
    }
    function clearAll(){
-    alert("Thank you for your support");
+    alert(t('thank you'));
     setCartItems(currItems => []);
    }
 

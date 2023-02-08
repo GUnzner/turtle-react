@@ -2,9 +2,10 @@ import React from 'react';
 import icon from '../images/icon.jpg';
 import githubIcon from '../images/github.png';
 import dght from '../images/dght.png';
-
+import { useTranslation } from 'react-i18next';
 
 function CustomFooter() { 
+    const { t } = useTranslation();
     return (
         <> 
         <footer className="footer">
@@ -14,7 +15,7 @@ function CustomFooter() {
                     style={{height: '20px'}}
                     src={icon}
                 />
-                <h3>Save the turtles</h3>
+                <h3>{t('title')}</h3>
                 { <ul className="footer-nav">
                     <li><a href="https://github.com/GUnzner" target="_blank"
                     rel="noreferrer">

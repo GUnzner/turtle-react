@@ -1,12 +1,15 @@
 import { useShoppingCart } from "../context/ShoppingCartContext";
-import storeItems from "../data/items.json";
+//import storeItems from "../data/items.json";
 import { Stack, Button } from "react-bootstrap";
 import { formatCurrency } from "../utilities/currencyFormat";
+import { useTranslation } from 'react-i18next';
 
 
 export function CartItem({ id, quantity }) {
     const { removeFromCart } = useShoppingCart()
-    const item = storeItems.find(i => i.id === id)
+    const { t } = useTranslation();
+    const cart = new Set(t('cart', { returnObjects: true }))
+    const item = Array.from(cart).find(i => i.id === id)
     if(item == null) return null
 
     return (

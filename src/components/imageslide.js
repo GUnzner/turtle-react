@@ -10,8 +10,8 @@ const ImageSlider = ({ slides }) => {
     }
     
     const slideStyles = {
-      width: "50rem",
-      height: "50rem",
+      width: "50vw",
+      height: "50vw",
       borderRadius: "10px",
       backgroundPosition: "center",
       backgroundSize: "cover",
@@ -66,8 +66,8 @@ const ImageSlider = ({ slides }) => {
   
     return (
       <div style={sliderStyles}>
-        <div style={leftArrowStyles} onClick={goToPrevious}>←</div>
-        <div style={rightArrowStyles} onClick={goToNext}>→</div>
+        <div style={leftArrowStyles} onClick={goToPrevious}>❮</div>
+        <div style={rightArrowStyles} onClick={goToNext}>❯</div>
         <div style={slideStyles}></div>
       </div>
     );

@@ -3,18 +3,22 @@ import React from "react";
 import i18next from "i18next";
 import { useShoppingCart } from "./context/ShoppingCartContext";
 import { Button } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+import icon from './/images/favicon.ico';
 
 
 export default function Navbar () {
     const { openCart, cartQuantity} = useShoppingCart()
+    const { t } = useTranslation();
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light main-header">
-            <ul className="navbar-nav mx-auto">
-            <Link to="/" className="site-title">Save the Turtles</Link> 
-            <CustomLink to="/about" className="link">About</CustomLink>
-            <CustomLink to="/donate" className="link">Donate</CustomLink>
-            <CustomLink to="/contact" className="link">Contact</CustomLink>
+            <ul className="navbar-nav m-auto">
+            <img   alt="Icon" style={{height: '3em', width: '3em'}} src={icon} />
+            <Link to="/" className="site-title">{t('title')}</Link> 
+            <CustomLink to="/about" className="link">{t('about')}</CustomLink>
+            <CustomLink to="/donate" className="link">{t('Donate')}</CustomLink>
+            <CustomLink to="/contact" className="link">{t('Contact')}</CustomLink>
             </ul>
 
             <ul className="nav navbar-nav navbar-right">

@@ -2,10 +2,12 @@ import { Card } from "react-bootstrap";
 import { formatCurrency } from "../utilities/currencyFormat";
 import {Button} from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
+import { useTranslation } from 'react-i18next';
 
 export function StoreItem( {id, name, price, imgUrl}) {
     const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart()
     const quantity = getItemQuantity(id)
+    const { t } = useTranslation();
 
     return (
     <Card className="h-100">
@@ -17,16 +19,16 @@ export function StoreItem( {id, name, price, imgUrl}) {
         </Card.Title>
         <div className="mt-auto">
             {quantity === 0 ? (
-                <Button className="w-100" onClick={() => increaseCartQuantity(id)}>+ Add to Cart </Button>
+                <Button className="w-100" onClick={() => increaseCartQuantity(id)}>{t('add to Cart')} </Button>
             ) : <div className="d-flex align-items-center flex-column" style={{gap: ".5rem"}}>
                     <div className="d-flex align-items-center justify-content-center" style={{gap: ".5rem"}}>
                         <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
                         <div>
-                        <span className="fs-3">{quantity}</span> in cart
+                        <span className="fs-3">{quantity}</span> {t('in cart')}
                         </div>
                         <Button onClick={() => increaseCartQuantity(id)}>+</Button>
                     </div>
-                    <Button variant="danger" size="sm" onClick={() => removeFromCart(id)}>Remove</Button>
+                    <Button variant="danger" size="sm" onClick={() => removeFromCart(id)}>{t('remove')}</Button>
                 </div>}
         </div>
     </Card>

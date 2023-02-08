@@ -7,6 +7,6 @@ export default function About(){
     return (
     <><h1 className="headline">{t('about')}</h1>
     <p>{t('about-text')}</p>
-    <img alt='Schildi' className="mb-5" style={{height: '400px'}} src={turtle}></img></>
+    <img alt='Schildi' className="mb-5" style={{height: '50vw'}} src={turtle}></img></>
     )
 }
