@@ -8,7 +8,7 @@ function CustomFooter() {
     const { t } = useTranslation();
     return (
         <> 
-        <footer className="footer">
+        <footer className="footer mt-auto">
             <div className="container footer-container">
                 <img 
                     alt="Icon"

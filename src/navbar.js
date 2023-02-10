@@ -12,18 +12,34 @@ export default function Navbar () {
     const { t } = useTranslation();
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light main-header">
-            <ul className="navbar-nav m-auto">
-            <img   alt="Icon" style={{height: '3em', width: '3em'}} src={icon} />
-            <Link to="/" className="site-title">{t('title')}</Link> 
-            <CustomLink to="/about" className="link">{t('about')}</CustomLink>
-            <CustomLink to="/donate" className="link">{t('Donate')}</CustomLink>
-            <CustomLink to="/contact" className="link">{t('Contact')}</CustomLink>
-            </ul>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="container-fluid">
+                <button className="navbar-toggler" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#menuItems" 
+                    aria-controls="menuItems" aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="menuItems">
+                    <img   alt="Icon" style={{height: '3em', width: '3em'}} src={icon} />
+                    <Link to="/" className="navbar-brand">{t('title')}</Link> 
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li className="nav-item">
+                        <CustomLink to="/about" className="nav-link">{t('about')}</CustomLink>
+                        </li>
+                        <li className="nav-item">
+                        <CustomLink to="/donate" className="nav-link">{t('Donate')}</CustomLink>
+                        </li>
+                        <li className="nav-item">
+                        <CustomLink to="/contact" className="nav-link">{t('Contact')}</CustomLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
             <ul className="nav navbar-nav navbar-right">
-            <button onClick={() => i18next.changeLanguage('en')}>English</button>
-            <button onClick={() => i18next.changeLanguage('de')}>Deutsch</button>
+            <button className="m-auto" onClick={() => i18next.changeLanguage('en')}>English</button>
+            <button className="m-auto" onClick={() => i18next.changeLanguage('de')}>Deutsch</button>
 
             {cartQuantity > 0 && (
                 <Button 

@@ -40,23 +40,23 @@ function App() {
     
     
     return (
-        <> 
-        <ShoppingCartProvider>
-        <Navbar/>
-        <div className="content container">
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/donate" element={<Donate />} />
-            </Routes>
-       
+      <div className="sticky-footer">
+          <ShoppingCartProvider>
+          <Navbar/>
+          <div className="content container">
+              <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/donate" element={<Donate />} />
+              </Routes>
         
-        </div>
+          
+          </div>
 
-        <CustomFooter/>
-        </ShoppingCartProvider>
-        </>
+          <CustomFooter/>
+          </ShoppingCartProvider>
+      </div>
         
     );
 }
