@@ -1,0 +1,53 @@
+{
+    "Welcome": "Willkommen bei Rettet die Schildkröten!",
+    "Home": "Startseite",
+    "Donate": "Spenden",
+    "Donate-text": "Kaufen Sie süße Schildkrötenartikel und spenden Sie für einen guten Zweck",
+    "title": "Rettet die Schildkröten",
+    "Contact": "Kontaktieren Sie uns",
+    "Full-name": "Name",
+    "email": "E-Mail-Adresse",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "your message": "Geben Sie hier Ihre Nachricht ein...",
+    "submit": "Absenden",
+    "find": "Hier finden Sie uns",
+    "total": "Gesamt",
+    "Cart": "Einkaufswagen",
+    "checkout": "Bezahlen",
+    "add to Cart": "+ Hinzufügen",
+    "in cart": "im Warenkorb",
+    "remove": "Entfernen",
+    "thank you": "Vielen Dank für Ihre Unterstützung",
+    "about": "Über uns",
+    "about-text": "Auf dieser Website erfahren Sie alles über Schildkröten. Sie können dabei helfen, die Schildkröten zu retten, indem Sie niedliche Produkte aus unserem Store kaufen, oder kontaktieren Sie uns, um mehr zu erfahren!",
+    "cart": [
+        {
+            "id":1,
+            "name": "Tasse",
+            "price": 19.99,
+            "imgUrl": "/turtle-react-build/images/mug.jpg"
+        },
+
+        {
+            "id":2,
+            "name": "Tasche",
+            "price": 10.99,
+            "imgUrl": "/turtle-react-build/images/bag.jpg"
+        },
+
+        {
+            "id":3,
+            "name": "T-Shirt",
+            "price": 19.99,
+            "imgUrl": "/turtle-react-build/images/shirt.jpg"
+        },
+
+        {
+            "id":4,
+            "name": "Kerze",
+            "price": 19.99,
+            "imgUrl": "/turtle-react-build/images/candle.webp"
+        }
+    ]
+}
