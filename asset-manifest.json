@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/turtle-react-build/static/css/main.029481d9.css",
-    "main.js": "/turtle-react-build/static/js/main.11d8aa5c.js",
+    "main.js": "/turtle-react-build/static/js/main.d65c064f.js",
     "static/js/787.db5083d1.chunk.js": "/turtle-react-build/static/js/787.db5083d1.chunk.js",
     "static/media/Schildi.JPG": "/turtle-react-build/static/media/Schildi.f4f24d7d95b3ae6fa9bb.JPG",
     "static/media/tortoise.jpg": "/turtle-react-build/static/media/tortoise.5d6d0da2d0c2b347f4ca.jpg",
@@ -23,11 +23,11 @@
     "index.html": "/turtle-react-build/index.html",
     "static/media/getFetch.cjs": "/turtle-react-build/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.029481d9.css.map": "/turtle-react-build/static/css/main.029481d9.css.map",
-    "main.11d8aa5c.js.map": "/turtle-react-build/static/js/main.11d8aa5c.js.map",
+    "main.d65c064f.js.map": "/turtle-react-build/static/js/main.d65c064f.js.map",
     "787.db5083d1.chunk.js.map": "/turtle-react-build/static/js/787.db5083d1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.029481d9.css",
-    "static/js/main.11d8aa5c.js"
+    "static/js/main.d65c064f.js"
   ]
 }
