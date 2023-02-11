@@ -26,28 +26,28 @@
             "id":1,
             "name": "Tasse",
             "price": 19.99,
-            "imgUrl": "/images/mug.jpg"
+            "imgUrl": "/turtle-react/images/mug.jpg"
         },
 
         {
             "id":2,
             "name": "Tasche",
             "price": 10.99,
-            "imgUrl": "/images/bag.jpg"
+            "imgUrl": "/turtle-react/images/bag.jpg"
         },
 
         {
             "id":3,
             "name": "T-Shirt",
             "price": 19.99,
-            "imgUrl": "/images/shirt.jpg"
+            "imgUrl": "/turtle-react/images/shirt.jpg"
         },
 
         {
             "id":4,
             "name": "Kerze",
             "price": 19.99,
-            "imgUrl": "/images/candle.webp"
+            "imgUrl": "/turtle-react/images/candle.webp"
         }
     ]
 }

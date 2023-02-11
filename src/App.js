@@ -24,7 +24,7 @@ i18n
       caches: ['cookie']
     },
     backend: {
-      loadPath: '/assets/locales/{{lng}}/translation.json',
+      loadPath: '/turtle-react/assets/locales/{{lng}}/translation.json',
     },
     react: { useSuspense: false}
   });
