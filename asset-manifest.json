@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/turtle-react/static/css/main.59cd961e.css",
-    "main.js": "/turtle-react/static/js/main.c4119745.js",
+    "main.js": "/turtle-react/static/js/main.ec117c46.js",
     "static/js/787.db5083d1.chunk.js": "/turtle-react/static/js/787.db5083d1.chunk.js",
     "static/media/Schildi.JPG": "/turtle-react/static/media/Schildi.f4f24d7d95b3ae6fa9bb.JPG",
     "static/media/tortoise.jpg": "/turtle-react/static/media/tortoise.5d6d0da2d0c2b347f4ca.jpg",
@@ -23,11 +23,11 @@
     "index.html": "/turtle-react/index.html",
     "static/media/getFetch.cjs": "/turtle-react/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.59cd961e.css.map": "/turtle-react/static/css/main.59cd961e.css.map",
-    "main.c4119745.js.map": "/turtle-react/static/js/main.c4119745.js.map",
+    "main.ec117c46.js.map": "/turtle-react/static/js/main.ec117c46.js.map",
     "787.db5083d1.chunk.js.map": "/turtle-react/static/js/787.db5083d1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.59cd961e.css",
-    "static/js/main.c4119745.js"
+    "static/js/main.ec117c46.js"
   ]
 }
